@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin:0
-        }
-        .background-image {
-            height: 100vh;
-            background-size: cover;
-            background-image: url("./img/PC_monstop20230530.gif");
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
 </head>
+
 <body>
-    <section class="background-image">
-    </section>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./img/top01.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./img/top02.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./img/top03.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./img/top04.jpg" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      delay:3000,
+      autoplay:true,
+      allowTouchMove:false,
+      fadeEffect:{
+        crossFade:true
+     },
+    });
+  </script>
 </body>
+
 </html>
